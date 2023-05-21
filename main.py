@@ -7,7 +7,7 @@ app = flask.Flask(__name__)
 @app.route("/return_secret_number")
 def hello():
     time.sleep(1)
-    return "hello"
+    return flask.jsonify(secret_number=1)
 
 
 if __name__ == "__main__":
