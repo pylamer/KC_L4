@@ -16,6 +16,7 @@ def hello():
 
 if __name__ == "__main__":
     secret_number = get_secret_number(URL_SEC_NUMBER)
+    print(secret_number)
     app.run()
 else:
     application = app
