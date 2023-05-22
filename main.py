@@ -3,9 +3,10 @@ import time
 import random
 from utils import get_secret_number
 
-URL_SEC_NUMBER = 'https://lab.karpov.courses/hardml-api/module-5/get_secret_number'
-
 app = flask.Flask(__name__)
+
+URL_SEC_NUMBER = 'https://lab.karpov.courses/hardml-api/module-5/get_secret_number'
+secret_number = get_secret_number(URL_SEC_NUMBER)
 
 
 @app.route("/return_secret_number")
@@ -16,7 +17,6 @@ def hello():
 
 
 if __name__ == "__main__":
-    secret_number = get_secret_number(URL_SEC_NUMBER)
     print(secret_number)
     app.run()
 else:
