@@ -11,6 +11,7 @@ app = flask.Flask(__name__)
 @app.route("/return_secret_number")
 def hello():
     time.sleep(1)
+    print("get started")
     return flask.jsonify(secret_number=secret_number, random_number=random.randint(1, 10))
 
 
